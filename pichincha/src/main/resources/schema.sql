@@ -1,0 +1,20 @@
+CREATE TABLE type_currency (
+    id INTEGER NOT NULL AUTO_INCREMENT,
+    name VARCHAR(200) NOT NULL,
+    code VARCHAR(10) NOT NULL,
+    value_currency NUMERIC(30, 10) NOT NULL, 
+    created_at VARCHAR(100) DEFAULT LOCALTIMESTAMP(3),
+    update_at  VARCHAR(100) DEFAULT LOCALTIMESTAMP(3),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE audit (
+    id INTEGER NOT NULL AUTO_INCREMENT,
+    user_name VARCHAR(200) NOT NULL,
+    id_currency INTEGER,
+    uri VARCHAR(200) NOT NULL,
+    method VARCHAR(10) NOT NULL,
+    change_value VARCHAR(MAX) NOT NULL,
+    change_at VARCHAR(100) DEFAULT LOCALTIMESTAMP(3),
+    PRIMARY KEY (id)
+);
